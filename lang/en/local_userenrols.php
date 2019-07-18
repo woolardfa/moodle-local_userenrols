@@ -37,6 +37,10 @@
 
     $string['LBL_IMPORT_TITLE']         = 'Import CSV Enrollment File';
 
+    $string['UNENROLL_MENU_LONG']       = 'Import Unenrolls';
+    $string['UNENROLL_MENU_SHORT']      = 'Import';
+    $string['LBL_UNENROLL_TITLE']       = 'Import CSV Unenrollment File';
+    $string['INF_META_UNENROLL_WARN']   = '<b>WARNING</b>: You can not remove enrollments that are from meta linked courses. Instead, remove enrollments from the child courses.<br /><br />';
     $string['LBL_IMPORT']               = 'Import';
     $string['LBL_IDENTITY_OPTIONS']     = 'User Identity';
     $string['LBL_ENROLL_OPTIONS']       = 'Enrollment Options';
@@ -124,6 +128,49 @@ Usernames (separated from group field with a tab character)
 <pre>
 johnsonf    "Presentation, Group One"
 samsel      Ten O\'Clock Testing
+</pre>';
+
+    $string['UNENROLL_MENU_LONG']       = 'Import Unenrolls';
+    $string['UNENROLL_MENU_SHORT']      = 'Unenroll';
+    $string['LBL_UNENROLL_TITLE']       = 'Import CSV Unenrollment File';
+    $string['INF_META_UNENROLL_WARN']   = '<b>WARNING</b>: You can not remove enrollments that are from meta linked courses. Instead, remove enrollments from the child courses.<br /><br />';
+    $string['INF_UNENROLL_SUCCESS']     = 'User unenrollment import successful';
+    $string['ERR_UNENROLL_META']        = "Line %u: Existing enrollment is from a meta linked course for userid '%s'\n";
+    $string['ERR_UNENROLL_FAILED']      = "Line %u: Unable to remove role assignment for userid '%s'\n";
+    $string['HELP_PAGE_UNENROLL']         = 'Import Unenrollments';
+    $string['HELP_PAGE_UNENROLL_help']    = '
+<p>
+Use this course import plugin to unenroll user enrollments from a delimited text
+file into the course.
+
+<ul>
+  <li>Each line of the import file represents a single record</li>
+  <li>Each record should at least contain one field with a userid value, whether it be a username, an e-mail address, or an internal idnumber.</li>
+  <li>Blank lines in the import file will be skipped</li>
+  <li>Note: If a user is not enrolled in the course, no changes will be made to that user\'s enrollment (i.e. no role change).</li>
+</ul>
+
+<h3>Examples</h3>
+
+Internal idnumber value and group
+<pre>
+2144323548
+2144323623
+2144323647
+2144323638
+</pre>
+
+E-mail addresses
+<pre>
+smith-john@university.edu
+janedoe@university.edu
+alan.jones@university.edu
+</pre>
+
+Usernames (separated from group field with a tab character)
+<pre>
+johnsonf
+samsel
 </pre>';
 
 /*
