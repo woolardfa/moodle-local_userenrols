@@ -154,11 +154,9 @@
                 $result[local_userenrols_plugin::FORMID_GROUP] = get_string('VAL_INVALID_SELECTION', local_userenrols_plugin::PLUGIN_NAME);
             }
 
-            if ($group_assign) {
-                $group_id = empty($data[local_userenrols_plugin::FORMID_GROUP_ID])
-                          ? 0 : $group_assign ? intval($data[local_userenrols_plugin::FORMID_GROUP_ID]) : 0;
-            } else {
-                $group_id = 0;
+            $group_id = 0;
+            if ($group_assign && !empty($data[local_userenrols_plugin::FORMID_GROUP_ID])) {
+                $group_id = intval($data[local_userenrols_plugin::FORMID_GROUP_ID]);
             }
             if ($group_id > 0 && !array_key_exists($group_id, groups_get_all_groups($this->_customdata['data']->course->id))) {
                 $group_id = 0;
