@@ -1,4 +1,8 @@
-##### Ver. 2018052009 Release 0.0.10_34 (Build 2020053100)
+##### Ver. 2018052011 Release 0.0.11_34 (Build 2020063000)
+
+  * Fix for PHP 8 ? operator needing parentheses
+
+##### Ver. 2018052010 Release 0.0.10_34 (Build 2020053100)
 
   * Use more flexible regex for idnumber validation
 
